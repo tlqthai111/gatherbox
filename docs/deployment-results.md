@@ -1,5 +1,21 @@
 # Published GatherBox prototype
 
+## Current deployed version for accessibility evaluation
+
+- Update: exact Team page and README credit, “Website development lead: Luu Quoc Thai Tran.”
+- Deployment date: 20 October 2026 (Australia/Sydney).
+- Deployed source commit: [`098f79884dd2bdbaa1014e8796863906b5ec2b68`](https://github.com/tlqthai111/gatherbox/commit/098f79884dd2bdbaa1014e8796863906b5ec2b68).
+- Successful manual deployment: [workflow run #2](https://github.com/tlqthai111/gatherbox/actions/runs/39399578265); both build and deploy jobs passed.
+- Website: https://tlqthai111.github.io/gatherbox/
+- Verified Team page: https://tlqthai111.github.io/gatherbox/team.html
+- Team HTML SHA-256: `ab4a92eca626e7df3c24a9c6ee1216174efc37c6d50d92307f759c26979f8e35`.
+
+The local production build passed. The existing workflow also passed its install, Node-test, build and deployment steps. Verified the visible credit and all three member names/SIDs in the hosted browser; anonymous HTTPS Team HTML matched the local build byte-for-byte. The three-member table and existing Claude/Codex acknowledgements are retained. This was a text-only change; the full 37-check browser suite below was not repeated for this version. Formal accessibility evaluation and unfinished report sections remain pending.
+
+Use this deployed commit plus the published URLs and actual evaluation date when recording Task 8 evidence. The documentation follow-up commit only records this result and does not change website build content.
+
+## Initial publication (historical record)
+
 Published and verified **20 October 2026 (Australia/Sydney)**, with explicit user authorisation.
 
 - Repository: https://github.com/tlqthai111/gatherbox (public; verified through GitHub and the authenticated connector).
@@ -17,7 +33,7 @@ Verified working directory and Git root as `/Users/vanln/Developer/gatherbox`. K
 
 Pages source is **GitHub Actions**. The manual-only prepared workflow built with `npm ci`, passed five Node tests and the seven-page production build, configured Pages, uploaded its artifact, then deployed successfully. Setup-node's pinned v7 revision was refreshed after verifying official tag SHAs. No deployment or `/gatherbox/` path failure required a website code fix. GitHub reported runner migration notices and a dependency deprecation message; both jobs completed successfully.
 
-The documentation follow-up commit records results only; it does not change the deployed HTML/CSS/JS or assets. The deployed source above remains the exact tested website version.
+The documentation follow-up commit records results only; it does not change the deployed HTML/CSS/JS or assets. The initial deployed source above identifies the version used for those original tests; the current credit-update version is recorded at the top of this file.
 
 ## Team verification
 

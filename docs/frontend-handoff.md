@@ -4,6 +4,8 @@
 
 ## Current result
 
+Latest credit-only update: deployed commit `098f79884dd2bdbaa1014e8796863906b5ec2b68`, [successful workflow #2](https://github.com/tlqthai111/gatherbox/actions/runs/39399578265). The exact requested development-lead credit appears on Team/README. Focused hosted Team verification passed; see `deployment-results.md` for the current evaluation version and the separate historical full-browser results. Formal accessibility/report work remains pending.
+
 The original seven-page visual design is retained. Cart, checkout, explicit payment simulation, confirmation and contact validation are implemented. The production build and five Node tests pass; the expanded suite of 37 grouped Chromium checks passes against both local production and the hosted site. Exact results and limits are in [testing-results.md](testing-results.md). Published on 20 October 2026: [repository](https://github.com/tlqthai111/gatherbox), [public website](https://tlqthai111.github.io/gatherbox/), [successful workflow](https://github.com/tlqthai111/gatherbox/actions/runs/39392380257). See [deployment-results.md](deployment-results.md).
 
 This is a UTS 31245 B2C student prototype: two neutral tableware kits for 10/20 guests, initially proposed for Sydney households. Each guest has one plate, cup, fork and napkin. No backend, accounts, real payment, order delivery or external APIs. Optional extras are outside the current prototype scope; align Task 7 in the report accordingly.

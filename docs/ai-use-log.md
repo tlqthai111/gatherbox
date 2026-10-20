@@ -98,3 +98,8 @@ No hosted deployment, GitHub Actions execution, real payment or business transac
 ### Publication checks and limits
 
 Codex independently inspected the workflow result, checked seven hosted page responses and /gatherbox/ assets/navigation, verified the main purchase simulation and empty-cart safeguards, and confirmed all supplied Team SIDs. Saved only source/docs/tests/configuration to Git; references, environment files and local screenshots remained excluded. `docs/deployment-results.md` lists evidence, URLs and remaining manual evaluation work. No home-folder repository, real purchase or external messaging was used. Formal AChecker/W3C evaluation, screen-reader testing and WCAG conformance are not claimed. The team still needs to assess these outputs and select report evidence.
+
+
+## Entry 4: Requested development-lead credit
+
+20 October 2026, OpenAI Codex. Added the user's exact credit, “Website development lead: Luu Quoc Thai Tran.”, to the Team page and README. Retained all three member names/SIDs and existing AI-assistance acknowledgements. Local production build passed; deployed source `098f79884dd2bdbaa1014e8796863906b5ec2b68` through the existing manual workflow [run #2](https://github.com/tlqthai111/gatherbox/actions/runs/39399578265), whose build/test/deploy steps passed. Verified the hosted Team credit/member list through the browser and compared its HTML byte-for-byte with the production output. Recorded the deployed commit, URL and HTML digest in `deployment-results.md` for later evaluation. The full browser suite was not rerun for this text-only change; no formal accessibility evaluation or unfinished report completion is claimed.
