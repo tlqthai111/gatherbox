@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Help and contact | GatherBox student prototype</title>
+    <meta name="description" content="Answers to common questions about GatherBox kits, proposed delivery and returns, and the demonstration contact form." />
+    <link rel="icon" href="/src/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body data-page="help">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="demo-banner">
+        <p class="container">
+          <strong>Student prototype.</strong> GatherBox is a university assessment project, not a real store.
+          Prices are sample values and no orders are sent or delivered.
+          <a href="team.html">About this prototype</a>
+        </p>
+      </div>
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="/src/assets/favicon.svg" alt="" width="28" height="28" />
+          <span>GatherBox<span class="visually-hidden"> home page</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav-list" hidden>
+            Menu
+          </button>
+          <ul id="site-nav-list" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop kits</a></li>
+          <li><a href="help.html" aria-current="page">Help and contact</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li>
+            <a href="cart.html" class="nav-cart">Cart <span class="cart-count" data-cart-count hidden></span></a>
+          </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <noscript><p class="notice container">Enable JavaScript to use the demonstration forms and cart. No information will be submitted while JavaScript is unavailable.</p></noscript>
+      <div class="container page-intro">
+        <h1>Help and contact</h1>
+        <p class="lede">Answers about the kits, the proposed delivery and returns approach, and this prototype.</p>
+      </div>
+
+      <div class="container content-grid">
+        <section aria-labelledby="faq-heading">
+          <h2 id="faq-heading">Frequently asked questions</h2>
+
+          <div class="faq-group">
+            <h3>About the kits</h3>
+            <details>
+              <summary>What is in each kit?</summary>
+              <div class="details-body">
+                <p>Every kit contains plates, cups, forks and napkins in equal numbers, all in one neutral style.</p>
+                <ul>
+                  <li>10-guest kit: 10 plates, 10 cups, 10 forks and 10 napkins.</li>
+                  <li>20-guest kit: 20 plates, 20 cups, 20 forks and 20 napkins.</li>
+                </ul>
+                <p>Kits do not include knives, spoons, serving ware or decorations.</p>
+              </div>
+            </details>
+            <details>
+              <summary>Which kit should I choose?</summary>
+              <div class="details-body">
+                <p>
+                  Choose the 10-guest kit for up to 10 people and the 20-guest kit for up to 20. For larger groups,
+                  combine kits: for example, 30 guests would need one 20-guest kit and one 10-guest kit.
+                  <a href="shop.html#fit-heading">See the full guide on the shop page</a>.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>What are the plates, cups, forks and napkins made of?</summary>
+              <div class="details-body">
+                <p>
+                  This has not been confirmed yet. GatherBox has not selected a supplier, so we do not make any claims
+                  about materials, recyclability or compostability. Materials would be listed on each kit once confirmed.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Are there other colours or themes?</summary>
+              <div class="details-body">
+                <p>No. GatherBox plans to offer one neutral style so that kits suit most occasions and are simple to choose.</p>
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-group">
+            <h3>Delivery and returns <span class="badge badge--demo">Proposed</span></h3>
+            <p class="field-hint">The answers in this group describe a proposed policy. It is not in effect.</p>
+            <details>
+              <summary>Where would GatherBox deliver?</summary>
+              <div class="details-body">
+                <p>
+                  The proposed delivery area is the Sydney metropolitan area. Exact suburbs and postcodes have not been
+                  confirmed.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>How much would delivery cost?</summary>
+              <div class="details-body">
+                <p>
+                  This prototype uses one sample flat delivery charge of <span data-delivery-price>$12.00</span> per order. A real charge would depend on
+                  carrier quotes, which have not been obtained.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>How long would delivery take?</summary>
+              <div class="details-body">
+                <p>
+                  The proposed target is to dispatch paid orders within two business days. Delivery times after dispatch
+                  would depend on the carrier and are not confirmed. This is a proposed business target, not verified performance or a delivery guarantee.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>What would the returns policy be?</summary>
+              <div class="details-body">
+                <p>Proposed arrangements for missing or damaged items, returns and refunds remain to be finalised before any launch. No return or reporting deadlines have been agreed.</p>
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-group">
+            <h3>About this prototype</h3>
+            <details>
+              <summary>Is GatherBox a real store?</summary>
+              <div class="details-body">
+                <p>
+                  No. GatherBox is a prototype created for a UTS student assessment. It is not a registered or trading
+                  business. <a href="team.html">Meet the team</a>.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>How is payment handled?</summary>
+              <div class="details-body">
+                <p>
+                  In this prototype, payment is only simulated: at checkout you choose whether the payment is approved or
+                  declined. No card details are requested. A launched store would use a hosted payment provider, so
+                  GatherBox would not store card details itself.
+                </p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section aria-labelledby="contact-heading">
+          <h2 id="contact-heading">Contact form (demonstration)</h2>
+          <div class="notice">
+            <p>
+              <strong>This demonstration form does not send messages.</strong> Nothing you type is delivered to anyone.
+              Please use fictional details.
+            </p>
+          </div>
+          <div id="contact-error-summary" class="error-summary" tabindex="-1" aria-labelledby="contact-error-heading" hidden>
+            <h3 id="contact-error-heading">Please fix the following</h3>
+            <ul data-error-list></ul>
+          </div>
+          <div id="contact-status" class="status-message" role="status" aria-live="polite" data-contact-status></div>
+          <form id="contact-form" class="panel" data-contact-form>
+            <div class="field">
+                <label for="contact-name">Your name</label>
+                <p class="field-error" id="contact-name-error" data-error-for="contact-name"></p>
+                <input disabled data-js-required id="contact-name" name="name" type="text" autocomplete="off" required aria-describedby="contact-name-error" />
+              </div>
+            <div class="field">
+                <label for="contact-email">Email address</label>
+                <p class="field-hint" id="contact-email-hint">Use a made-up address, for example alex@example.com.</p>
+                <p class="field-error" id="contact-email-error" data-error-for="contact-email"></p>
+                <input disabled data-js-required id="contact-email" name="email" type="email" autocomplete="off" required aria-describedby="contact-email-hint contact-email-error" spellcheck="false" />
+              </div>
+            <div class="field">
+              <label for="contact-topic">Topic</label>
+              <p class="field-error" id="contact-topic-error" data-error-for="contact-topic"></p>
+              <select disabled data-js-required id="contact-topic" name="topic" required aria-describedby="contact-topic-error">
+                <option value="">Choose a topic</option>
+                <option value="kits">Kit contents</option>
+                <option value="delivery">Delivery</option>
+                <option value="returns">Returns</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="contact-message">Message</label>
+              <p class="field-error" id="contact-message-error" data-error-for="contact-message"></p>
+              <textarea disabled data-js-required id="contact-message" name="message" rows="6" required aria-describedby="contact-message-error"></textarea>
+            </div>
+            <button disabled data-js-required type="submit" class="btn btn--primary" data-action="send-contact">Send (demonstration only)</button>
+          </form>
+
+          <section class="panel u-mt-5" aria-labelledby="contact-details-heading">
+            <h3 id="contact-details-heading">Contact details</h3>
+            <p>
+              This prototype has no real phone number, email address or social media accounts. They would be published
+              here if GatherBox launched.
+            </p>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">GatherBox</p>
+          <p>
+            A proposed online store for neutral tableware kits for Sydney gatherings. Created as a UTS 31245
+            Business Process and IT Strategy student prototype, 2026.
+          </p>
+        </div>
+        <nav aria-label="Footer">
+          <h2 class="footer-heading">Pages</h2>
+          <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop kits</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="help.html">Help and contact</a></li>
+          <li><a href="team.html">Team</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-heading">About this prototype</h2>
+          <p>
+            Prices and the delivery charge are sample values. Materials, suppliers and delivery arrangements are not yet
+            confirmed. No payments are taken and no orders are fulfilled.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

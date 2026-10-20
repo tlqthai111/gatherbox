@@ -1,0 +1,25 @@
+# Assessment reference material (not for publication)
+reference/
+
+# Dependencies and build output
+node_modules/
+dist/
+dist-ssr/
+.vite/
+coverage/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Temporary and OS files
+tmp/
+temp/
+*.tmp
+*.log
+npm-debug.log*
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json

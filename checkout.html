@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout | GatherBox student prototype</title>
+    <meta name="description" content="Demonstration checkout for the GatherBox student prototype. Use fictional details only." />
+    <link rel="icon" href="/src/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body data-page="checkout">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="demo-banner">
+        <p class="container">
+          <strong>Student prototype.</strong> GatherBox is a university assessment project, not a real store.
+          Prices are sample values and no orders are sent or delivered.
+          <a href="team.html">About this prototype</a>
+        </p>
+      </div>
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="/src/assets/favicon.svg" alt="" width="28" height="28" />
+          <span>GatherBox<span class="visually-hidden"> home page</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav-list" hidden>
+            Menu
+          </button>
+          <ul id="site-nav-list" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop kits</a></li>
+          <li><a href="help.html">Help and contact</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li>
+            <a href="cart.html" class="nav-cart">Cart <span class="cart-count" data-cart-count hidden></span></a>
+          </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <noscript><p class="notice container">Enable JavaScript to use the demonstration forms and cart. No information will be submitted while JavaScript is unavailable.</p></noscript>
+      <div class="container page-intro">
+        <h1>Checkout</h1>
+        <div class="notice">
+          <p>
+            <strong>Student prototype: enter fictional details only.</strong> This page does not take payment, does not
+            ask for card details and does not send an order. Your checkout details are not saved and do not appear on confirmation. Use a made-up name and address, such as
+            &ldquo;Alex Sample&rdquo; and &ldquo;alex@example.com&rdquo;.
+          </p>
+        </div>
+
+        <div
+          id="checkout-error-summary"
+          class="error-summary"
+          tabindex="-1"
+          aria-labelledby="checkout-error-heading"
+          data-error-summary
+          hidden
+        >
+          <h2 id="checkout-error-heading">Please fix the following</h2>
+          <ul data-error-list></ul>
+        </div>
+
+        <div id="checkout-alert" class="alert-region" role="alert" data-checkout-alert></div>
+        <div id="checkout-status" class="status-message" role="status" aria-live="polite" data-checkout-status></div>
+      </div>
+
+      <div class="container two-col-layout">
+        <form id="checkout-form" data-checkout-form>
+          <p class="field-hint">All fields are required unless marked optional.</p>
+          <fieldset>
+            <legend>Your details</legend>
+              <div class="field">
+                <label for="checkout-name">Full name</label>
+                <p class="field-error" id="checkout-name-error" data-error-for="checkout-name"></p>
+                <input disabled data-js-required id="checkout-name" name="fullName" type="text" autocomplete="off" required aria-describedby="checkout-name-error" />
+              </div>
+              <div class="field">
+                <label for="checkout-email">Email address</label>
+                <p class="field-hint" id="checkout-email-hint">Use a made-up address, for example alex@example.com.</p>
+                <p class="field-error" id="checkout-email-error" data-error-for="checkout-email"></p>
+                <input disabled data-js-required id="checkout-email" name="email" type="email" autocomplete="off" required aria-describedby="checkout-email-hint checkout-email-error" spellcheck="false" />
+              </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Delivery address</legend>
+            <p class="field-hint">Proposed delivery area: Sydney metropolitan area. Enter a fictional address.</p>
+              <div class="field">
+                <label for="checkout-address1">Street address</label>
+                <p class="field-error" id="checkout-address1-error" data-error-for="checkout-address1"></p>
+                <input disabled data-js-required id="checkout-address1" name="addressLine1" type="text" autocomplete="off" required aria-describedby="checkout-address1-error" />
+              </div>
+              <div class="field">
+                <label for="checkout-address2">Apartment, unit or building <span class="field-optional">(optional)</span></label>
+                <p class="field-error" id="checkout-address2-error" data-error-for="checkout-address2"></p>
+                <input disabled data-js-required id="checkout-address2" name="addressLine2" type="text" autocomplete="off" aria-describedby="checkout-address2-error" />
+              </div>
+              <div class="field">
+                <label for="checkout-suburb">Suburb</label>
+                <p class="field-error" id="checkout-suburb-error" data-error-for="checkout-suburb"></p>
+                <input disabled data-js-required id="checkout-suburb" name="suburb" type="text" autocomplete="off" required aria-describedby="checkout-suburb-error" />
+              </div>
+            <div class="static-field">
+              <span class="field-label">State</span>
+              <span>New South Wales (NSW)</span>
+              <input disabled data-js-required type="hidden" name="state" value="NSW" />
+            </div>
+              <div class="field">
+                <label for="checkout-postcode">Postcode</label>
+                <p class="field-hint" id="checkout-postcode-hint">4 digits, for example 2000.</p>
+                <p class="field-error" id="checkout-postcode-error" data-error-for="checkout-postcode"></p>
+                <input disabled data-js-required id="checkout-postcode" name="postcode" type="text" autocomplete="off" required aria-describedby="checkout-postcode-hint checkout-postcode-error" class="input--postcode" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" />
+              </div>
+          </fieldset>
+
+          <fieldset aria-describedby="payment-sim-hint payment-sim-error">
+            <legend>Payment simulation (no real payment)</legend>
+            <p class="field-hint" id="payment-sim-hint">
+              No payment is taken and no card details are requested. Choose the result you want to demonstrate. A
+              launched store would use a hosted payment provider instead.
+            </p>
+            <p class="field-error" id="payment-sim-error" data-error-for="payment-sim-approved"></p>
+            <div class="radio-group">
+              <label class="radio-option" for="payment-sim-approved">
+                <input disabled data-js-required type="radio" id="payment-sim-approved" aria-describedby="payment-sim-hint payment-sim-error" name="paymentSimulation" value="approved" required />
+                <span class="radio-option-text">
+                  <strong>Simulate an approved payment</strong>
+                  <span>Shows the demonstration order confirmation.</span>
+                </span>
+              </label>
+              <label class="radio-option" for="payment-sim-declined">
+                <input disabled data-js-required type="radio" id="payment-sim-declined" aria-describedby="payment-sim-hint payment-sim-error" name="paymentSimulation" value="declined" />
+                <span class="radio-option-text">
+                  <strong>Simulate a declined payment</strong>
+                  <span>Shows the message a customer would see if payment failed.</span>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <button disabled data-js-required type="submit" class="btn btn--primary" data-action="place-order">Place demonstration order</button>
+          <p class="field-hint u-mt-3">This button does not charge anyone or send an order.</p>
+        </form>
+
+        <aside class="order-summary" aria-labelledby="checkout-summary-heading">
+            <h2 id="checkout-summary-heading">Order summary</h2>
+            <div data-checkout-state="empty">
+              <p>Your cart is empty. Add a kit before checking out.</p>
+              <a class="btn btn--secondary btn--block" href="shop.html">Shop kits</a>
+            </div>
+            <div data-checkout-state="filled" hidden>
+              <ul class="summary-lines" data-checkout-lines></ul>
+              <dl class="summary-list">
+                <div>
+                  <dt>Subtotal</dt>
+                  <dd data-checkout-subtotal>$0.00</dd>
+                </div>
+                <div>
+                  <dt>Delivery <span class="summary-note">Sydney, sample flat charge</span></dt>
+                  <dd data-checkout-delivery>$12.00</dd>
+                </div>
+                <div class="summary-total">
+                  <dt>Total (AUD)</dt>
+                  <dd data-checkout-total>$0.00</dd>
+                </div>
+              </dl>
+              <p class="price-note">Sample values only. <a href="cart.html">Edit cart</a></p>
+            </div>
+          </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">GatherBox</p>
+          <p>
+            A proposed online store for neutral tableware kits for Sydney gatherings. Created as a UTS 31245
+            Business Process and IT Strategy student prototype, 2026.
+          </p>
+        </div>
+        <nav aria-label="Footer">
+          <h2 class="footer-heading">Pages</h2>
+          <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop kits</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="help.html">Help and contact</a></li>
+          <li><a href="team.html">Team</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-heading">About this prototype</h2>
+          <p>
+            Prices and the delivery charge are sample values. Materials, suppliers and delivery arrangements are not yet
+            confirmed. No payments are taken and no orders are fulfilled.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

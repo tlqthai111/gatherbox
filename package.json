@@ -1,0 +1,19 @@
+{
+  "name": "gatherbox",
+  "private": true,
+  "version": "0.1.0",
+  "description": "GatherBox: UTS 31245 student B2C tableware kit prototype",
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "vite": "^8.3.4"
+  }
+}

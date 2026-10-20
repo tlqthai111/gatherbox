@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shop tableware kits | GatherBox student prototype</title>
+    <meta name="description" content="Compare the GatherBox 10-guest and 20-guest tableware kits, their exact contents and sample prices." />
+    <link rel="icon" href="/src/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body data-page="shop">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="demo-banner">
+        <p class="container">
+          <strong>Student prototype.</strong> GatherBox is a university assessment project, not a real store.
+          Prices are sample values and no orders are sent or delivered.
+          <a href="team.html">About this prototype</a>
+        </p>
+      </div>
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="/src/assets/favicon.svg" alt="" width="28" height="28" />
+          <span>GatherBox<span class="visually-hidden"> home page</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav-list" hidden>
+            Menu
+          </button>
+          <ul id="site-nav-list" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html" aria-current="page">Shop kits</a></li>
+          <li><a href="help.html">Help and contact</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li>
+            <a href="cart.html" class="nav-cart">Cart <span class="cart-count" data-cart-count hidden></span></a>
+          </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <noscript><p class="notice container">Enable JavaScript to use the demonstration forms and cart. No information will be submitted while JavaScript is unavailable.</p></noscript>
+      <div class="container page-intro">
+        <h1>Shop tableware kits</h1>
+        <p class="lede">
+          Choose the kit that matches your guest count. Both sizes use the same neutral style and contain plates, cups,
+          forks and napkins in equal numbers.
+        </p>
+        <div class="notice notice--plain">
+          <p>Prices on this page are sample values for a student prototype, shown in Australian dollars.</p>
+        </div>
+        <div id="cart-status" class="status-message" role="status" aria-live="polite" data-cart-status></div>
+      </div>
+
+      <div class="container">
+        <h2 class="visually-hidden">Available kits</h2>
+        <div class="card-grid" data-product-list>
+          <article id="kit-10" class="kit-card kit-card--10" data-product-id="kit-10" aria-labelledby="kit-10-name">
+            <img src="/src/assets/kit-10.svg" alt="Illustration of the 10-guest kit: one stack of plates, a row of cups, forks and folded napkins in neutral tones." width="400" height="300" />
+            <div class="kit-card-body">
+              <p class="badge">Serves up to 10 guests</p>
+              <h3 id="kit-10-name">10-guest kit</h3>
+              <p class="price-line">
+                <span class="price" data-price-for="kit-10">$29.00</span>
+                <span class="price-note">Sample price (AUD) per kit</span>
+              </p>
+              <h4 class="contents-heading" id="kit-10-contents">What is inside</h4>
+              <ul class="contents-list" aria-labelledby="kit-10-contents">
+                  <li><span class="qty">10</span> plates</li>
+                  <li><span class="qty">10</span> cups</li>
+                  <li><span class="qty">10</span> forks</li>
+                  <li><span class="qty">10</span> napkins</li>
+                </ul>
+              <p class="material-note">Style: neutral. Materials: to be confirmed with a supplier.</p>
+              <form class="add-to-cart" data-add-to-cart-form data-product-id="kit-10">
+                <div class="field">
+                  <label for="qty-kit-10">Quantity<span class="visually-hidden"> of 10-guest kits</span></label>
+                  <input disabled data-js-required
+                    id="qty-kit-10"
+                    name="quantity"
+                    type="number"
+                    inputmode="numeric"
+                    min="1"
+                    max="10"
+                    step="1"
+                    value="1"
+                    required
+                    data-quantity-input
+                  />
+                </div>
+                <button disabled data-js-required type="submit" class="btn btn--primary" data-action="add-to-cart" data-product-id="kit-10">
+                  Add to cart<span class="visually-hidden">: 10-guest kit</span>
+                </button>
+              </form>
+            </div>
+          </article>
+          <article id="kit-20" class="kit-card kit-card--20" data-product-id="kit-20" aria-labelledby="kit-20-name">
+            <img src="/src/assets/kit-20.svg" alt="Illustration of the 20-guest kit: two stacks of plates, two rows of cups, forks and folded napkins in neutral tones." width="400" height="300" />
+            <div class="kit-card-body">
+              <p class="badge">Serves up to 20 guests</p>
+              <h3 id="kit-20-name">20-guest kit</h3>
+              <p class="price-line">
+                <span class="price" data-price-for="kit-20">$49.00</span>
+                <span class="price-note">Sample price (AUD) per kit</span>
+              </p>
+              <h4 class="contents-heading" id="kit-20-contents">What is inside</h4>
+              <ul class="contents-list" aria-labelledby="kit-20-contents">
+                  <li><span class="qty">20</span> plates</li>
+                  <li><span class="qty">20</span> cups</li>
+                  <li><span class="qty">20</span> forks</li>
+                  <li><span class="qty">20</span> napkins</li>
+                </ul>
+              <p class="material-note">Style: neutral. Materials: to be confirmed with a supplier.</p>
+              <form class="add-to-cart" data-add-to-cart-form data-product-id="kit-20">
+                <div class="field">
+                  <label for="qty-kit-20">Quantity<span class="visually-hidden"> of 20-guest kits</span></label>
+                  <input disabled data-js-required
+                    id="qty-kit-20"
+                    name="quantity"
+                    type="number"
+                    inputmode="numeric"
+                    min="1"
+                    max="10"
+                    step="1"
+                    value="1"
+                    required
+                    data-quantity-input
+                  />
+                </div>
+                <button disabled data-js-required type="submit" class="btn btn--primary" data-action="add-to-cart" data-product-id="kit-20">
+                  Add to cart<span class="visually-hidden">: 20-guest kit</span>
+                </button>
+              </form>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <section class="section" aria-labelledby="fit-heading">
+        <div class="container">
+          <h2 id="fit-heading">Which kit fits your gathering?</h2>
+          <p>Match the number of guests to a kit, or combine kits for larger groups.</p>
+          <div class="table-wrap">
+            <table>
+              <caption>
+                Suggested kits by number of guests
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Number of guests</th>
+                  <th scope="col">Suggested kits</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1 to 10</td>
+                  <td>One 10-guest kit</td>
+                </tr>
+                <tr>
+                  <td>11 to 20</td>
+                  <td>One 20-guest kit</td>
+                </tr>
+                <tr>
+                  <td>21 to 30</td>
+                  <td>One 20-guest kit and one 10-guest kit</td>
+                </tr>
+                <tr>
+                  <td>31 to 40</td>
+                  <td>Two 20-guest kits</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="button-row u-mt-5">
+            <a class="btn btn--secondary" href="cart.html">View cart</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">GatherBox</p>
+          <p>
+            A proposed online store for neutral tableware kits for Sydney gatherings. Created as a UTS 31245
+            Business Process and IT Strategy student prototype, 2026.
+          </p>
+        </div>
+        <nav aria-label="Footer">
+          <h2 class="footer-heading">Pages</h2>
+          <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop kits</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="help.html">Help and contact</a></li>
+          <li><a href="team.html">Team</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-heading">About this prototype</h2>
+          <p>
+            Prices and the delivery charge are sample values. Materials, suppliers and delivery arrangements are not yet
+            confirmed. No payments are taken and no orders are fulfilled.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

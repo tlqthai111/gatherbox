@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Order confirmation | GatherBox student prototype</title>
+    <meta name="description" content="Demonstration order confirmation for the GatherBox student prototype." />
+    <link rel="icon" href="/src/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body data-page="confirmation">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="demo-banner">
+        <p class="container">
+          <strong>Student prototype.</strong> GatherBox is a university assessment project, not a real store.
+          Prices are sample values and no orders are sent or delivered.
+          <a href="team.html">About this prototype</a>
+        </p>
+      </div>
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="/src/assets/favicon.svg" alt="" width="28" height="28" />
+          <span>GatherBox<span class="visually-hidden"> home page</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav-list" hidden>
+            Menu
+          </button>
+          <ul id="site-nav-list" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop kits</a></li>
+          <li><a href="help.html">Help and contact</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li>
+            <a href="cart.html" class="nav-cart">Cart <span class="cart-count" data-cart-count hidden></span></a>
+          </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <div class="container page-intro">
+        <h1>Order confirmation</h1>
+      </div>
+
+      <div class="container">
+        <section class="empty-state" data-confirmation-state="empty" aria-labelledby="confirmation-empty-heading">
+          <h2 id="confirmation-empty-heading">No demonstration order to show</h2>
+          <p>
+            This page shows a summary after you complete the demonstration checkout. If you arrived here directly, there
+            is no order to display.
+          </p>
+          <div class="button-row">
+            <a class="btn btn--primary" href="shop.html">Shop kits</a>
+            <a class="btn btn--secondary" href="cart.html">View cart</a>
+          </div>
+        </section>
+
+        <section data-confirmation-state="order" aria-labelledby="confirmation-order-heading" hidden>
+          <p class="badge badge--demo">Demonstration order: not a real purchase</p>
+          <h2 id="confirmation-order-heading" class="u-mt-4">Demonstration order received</h2>
+          <div class="notice">
+            <p>
+              <strong>No payment was taken, no order was sent and nothing will be delivered.</strong> This summary shows
+              what a customer would see after a successful order.
+            </p>
+          </div>
+          <dl class="summary-list summary-list--compact">
+            <div>
+              <dt>Demonstration reference</dt>
+              <dd data-order-reference>GB-DEMO-000000</dd>
+            </div>
+            <div>
+              <dt>Simulated payment</dt>
+              <dd data-order-payment>Approved (simulated)</dd>
+            </div>
+          </dl>
+
+          <div class="content-grid">
+            <section class="panel" aria-labelledby="confirmation-items-heading">
+              <h3 id="confirmation-items-heading">Kits ordered</h3>
+              <ul class="summary-lines" data-confirmation-lines></ul>
+              <dl class="summary-list">
+                <div>
+                  <dt>Subtotal</dt>
+                  <dd data-confirmation-subtotal>$0.00</dd>
+                </div>
+                <div>
+                  <dt>Delivery <span class="summary-note">Sydney, sample flat charge</span></dt>
+                  <dd data-confirmation-delivery>$12.00</dd>
+                </div>
+                <div class="summary-total">
+                  <dt>Total (AUD)</dt>
+                  <dd data-confirmation-total>$0.00</dd>
+                </div>
+              </dl>
+            </section>
+            <section class="panel" aria-labelledby="confirmation-delivery-heading">
+              <h3 id="confirmation-delivery-heading">Your checkout details</h3>
+              <p>Names, email addresses and delivery addresses are not saved or shown here. Only this demonstration reference and kit quantities are kept for this tab. Closing the tab ends this confirmation session.</p>
+            </section>
+          </div>
+
+          <section class="prose" aria-labelledby="next-heading">
+            <h3 id="next-heading">What would happen next in a launched store</h3>
+            <p>These steps describe the proposed process. None of them happen in this prototype.</p>
+            <ol>
+              <li>The customer receives an order confirmation email.</li>
+              <li>The team picks and packs the kit, with a proposed target of dispatch within two business days. This is not verified performance or a delivery guarantee.</li>
+              <li>The carrier delivers the order and the customer can follow its tracking status.</li>
+            </ol>
+            <div class="button-row">
+              <a class="btn btn--primary" href="shop.html">Back to the shop</a>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">GatherBox</p>
+          <p>
+            A proposed online store for neutral tableware kits for Sydney gatherings. Created as a UTS 31245
+            Business Process and IT Strategy student prototype, 2026.
+          </p>
+        </div>
+        <nav aria-label="Footer">
+          <h2 class="footer-heading">Pages</h2>
+          <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop kits</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="help.html">Help and contact</a></li>
+          <li><a href="team.html">Team</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer-heading">About this prototype</h2>
+          <p>
+            Prices and the delivery charge are sample values. Materials, suppliers and delivery arrangements are not yet
+            confirmed. No payments are taken and no orders are fulfilled.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
