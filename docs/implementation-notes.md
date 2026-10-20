@@ -36,7 +36,7 @@ Validation covers name, email, topic and nonblank message. The valid result expl
 
 ## Hosting and future electronic payment strategy
 
-The production output is static HTML/CSS/JS/SVG, suitable for GitHub Pages at `/gatherbox/`. All seven entry pages are explicitly included. The local production preview has been tested; a hosted deployment has not run. `.github/workflows/deploy.yml` prepares a manual build/deploy with restricted permissions, pinned official actions, Node 24, `npm ci`, `npm test`, build, Pages artifact and `github-pages` environment. Only `dist/` is uploaded. Reference files stay ignored and are not build inputs. README lists the official documentation consulted and publication steps; no remote, push or publication was performed.
+The production output is static HTML/CSS/JS/SVG, suitable for GitHub Pages at `/gatherbox/`. All seven entry pages are explicitly included. The local production preview and [hosted site](https://tlqthai111.github.io/gatherbox/) have been tested. GitHub Actions [run #1](https://github.com/tlqthai111/gatherbox/actions/runs/39392380257) built and deployed successfully. `.github/workflows/deploy.yml` prepares a manual build/deploy with restricted permissions, pinned official actions, Node 24, `npm ci`, `npm test`, build, Pages artifact and `github-pages` environment. Only `dist/` is uploaded. Reference files stay ignored and are not build inputs. README lists the official documentation and maintenance steps; the user authorised public repository creation, push and publication on 20 October 2026, and these are now complete.
 
 A future operating store could use a hosted payment provider to handle payment credentials and server-verified outcomes. No provider has been selected or integrated. This prototype has no authentication, inventory reservation, fraud controls, payment webhooks, tax/accounting service, order database, email, carrier API or fulfilment workflow. These would require business decisions and secure backend work, not deployment of this browser simulation alone.
 
@@ -47,3 +47,8 @@ The report draft proposes sourcing/purchasing, catalogue/stock maintenance, orde
 ## Evidence and open work
 
 `testing-results.md` records Codex's checks separately from Claude's reported frontend checks. Use screenshots of actual production interactions for the report. Development fixtures were removed; query parameters no longer populate sample states. The user supplied Ashcan’s SID (26077610), confirmed all three identities and authorised publication on 20 October 2026. Capture final hosted evidence after deployment and carry out Task 8. No accessibility conformance claim is made.
+
+
+## Publication evidence
+
+The expanded 37-check suite passed on the actual HTTPS site, including all three confirmed Team SIDs and the extra empty-cart checks. Direct checkout with valid fictional details plus approval still cannot create an empty order. The empty cart has a working Shop kits link; nonempty blank/invalid checkout has inline and focused-summary errors. No empty-purchase option was added. Source deployment and evidence details are in `deployment-results.md`.

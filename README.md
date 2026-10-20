@@ -49,21 +49,27 @@ Alternatively set `PLAYWRIGHT_MODULE` to an existing Playwright `index.mjs`; `CH
 
 ## GitHub Pages deployment
 
-No remote repository has been created, no push has run, and nothing has been published. The saved workflow is **manual-only** (`workflow_dispatch`); it has no push trigger. It installs locked dependencies, runs the Node tests, builds, uploads **only `dist/`**, then deploys the approved `main` branch. GitHub-hosted workflow execution is still untested.
+Published with the user's explicit authorisation on 20 October 2026:
 
-The user authorised public repository creation, push and publication on 20 October 2026. Publication verification is in progress. Deployment procedure:
+- Public repository: [tlqthai111/gatherbox](https://github.com/tlqthai111/gatherbox)
+- Public website: [GatherBox student prototype](https://tlqthai111.github.io/gatherbox/)
+- Successful build/deploy: [GitHub Actions run #1](https://github.com/tlqthai111/gatherbox/actions/runs/39392380257), source commit `7d06c669e2c4fa0b0e271835f018dedc425ac826`.
+- All three Team identities verified against the user: Luu Quoc Thai Tran — 25507474; Anthony Bui — 26486593; Ashcan Zaman — 26077610. No SID is pending.
+- Hosted verification: **37 grouped Chromium checks passed**, including all seven pages, paths/assets, empty-cart safeguards, validation and the main payment simulation. This is not formal accessibility evaluation. See [deployment results](docs/deployment-results.md).
 
-1. Team details are confirmed from the user: Luu Quoc Thai Tran — 25507474; Anthony Bui — 26486593; Ashcan Zaman — 26077610. Align the report to the two base kits; optional extras are outside scope.
-2. Confirm `git rev-parse --show-toplevel` is this project. Inspect `git status --short` and `git check-ignore reference/*`. `reference/`, `node_modules/`, `dist/`, `.env*` and `tmp/` must stay excluded. Do not force-add reference documents.
-3. Only when authorised, create a GitHub repository named **gatherbox**. For GitHub Free, use a public repository. Review and commit the source locally, connect that repository and push `main` only with the user's approval. This README does not authorise those actions.
-4. In the repository, choose **Settings → Pages → Build and deployment → Source → GitHub Actions**.
-5. In **Actions → Deploy GatherBox to GitHub Pages → Run workflow**, select `main` and run it when publication is approved. The environment is `github-pages`; the workflow reports the deployed URL.
-6. Check `https://<username>.github.io/gatherbox/` and every `.html` page, including a fresh direct confirmation visit. Retest both payment outcomes and keyboard/mobile operation on that exact URL.
-7. Capture final screenshots and URL for Task 7. Run AChecker first, then prepare the complete W3C WAI evaluation report for Task 8 on that published version. Record actual findings, fixes, date, scope and pending issues.
+The saved workflow remains **manual-only** (`workflow_dispatch`), with no push trigger. It uses Node 24, installs locked dependencies with `npm ci`, runs `npm test`, builds all seven pages, uploads **only `dist/`** and deploys `main` through the `github-pages` environment. References, environment files, dependencies, build output and local test screenshots remain ignored. No home-folder repository was changed.
 
-The existing `base: '/gatherbox/'` and seven HTML inputs are in `vite.config.js`. A different repository name requires changing the base and repeating path tests. No SPA route fallback is needed.
+For future approved website changes:
 
-Official sources checked 20 October 2026: [GitHub custom Pages workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages), [Vite static deployment](https://vite.dev/guide/static-deploy.html), [GitHub Pages availability](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages). Action revisions are pinned to the current Vite example; review them before future upgrades.
+1. Edit and review locally; run `npm test`, `npm run build` and the browser regression script.
+2. Inspect `git status --short` and `git diff`; ensure `git check-ignore reference/*` still succeeds and no local environment file is tracked.
+3. Commit with the configured real identity and push `main` only when authorised. A push alone does not deploy.
+4. Pages is already configured at **Settings → Pages → Source → GitHub Actions**. In **Actions → Deploy GatherBox to GitHub Pages → Run workflow**, select `main`, inspect both jobs, then verify the hosted pages again.
+5. Capture final Task 7 screenshots/URL and run the required AChecker then W3C WAI evaluation for Task 8 against that same version. Record actual findings and unresolved issues.
+
+`vite.config.js` keeps `base: '/gatherbox/'` and seven HTML build inputs. A different repository name requires changing the base and repeating path tests. No SPA route fallback is needed. Code publication and an accessible-looking interface do not establish WCAG conformance.
+
+Official sources checked 20 October 2026: [GitHub custom Pages workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages), [Vite static deployment](https://vite.dev/guide/static-deploy.html). Official action tag revisions were checked against GitHub before deployment; setup-node's v7 pin was refreshed. Review revisions before future upgrades.
 
 ## Project notes
 

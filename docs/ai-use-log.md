@@ -90,6 +90,11 @@ No hosted deployment, GitHub Actions execution, real payment or business transac
 | Select representative prompts/outputs and critique for report appendix/presentation | | |
 
 
-## Entry 3: Authorised publication milestone (in progress)
+## Entry 3: Authorised publication milestone (completed)
 
-20 October 2026, OpenAI Codex. The user explicitly authorised creation of a public GitHub repository named gatherbox, code push and GitHub Pages publication, excluding references/environment files. The user supplied Ashcan Zaman — 26077610 and confirmed Thai — 25507474 and Anthony — 26486593. Updated Team/current notes, retained the empty-cart guard and expanded browser regression checks. Preflight build and five Node tests passed; 37 grouped production-browser checks passed. Actual repository/deployment/hosted results will be appended after they exist. This entry does not represent formal accessibility evaluation.
+20 October 2026, OpenAI Codex. The user explicitly authorised creation of a public GitHub repository named gatherbox, code push and GitHub Pages publication, excluding references/environment files. The user supplied Ashcan Zaman — 26077610 and confirmed Thai — 25507474 and Anthony — 26486593. Updated Team/current notes, retained the empty-cart guard and expanded browser regression checks. Preflight build and five Node tests passed; 37 grouped production-browser checks passed. Created [tlqthai111/gatherbox](https://github.com/tlqthai111/gatherbox) as public through authenticated GitHub Desktop, pushed the commit under the configured real author, configured Pages for GitHub Actions and manually dispatched [run #1](https://github.com/tlqthai111/gatherbox/actions/runs/39392380257). Both build and deploy succeeded. The expanded browser suite passed 37/37 checks on [the actual hosted site](https://tlqthai111.github.io/gatherbox/). This entry does not represent formal accessibility evaluation.
+
+
+### Publication checks and limits
+
+Codex independently inspected the workflow result, checked seven hosted page responses and /gatherbox/ assets/navigation, verified the main purchase simulation and empty-cart safeguards, and confirmed all supplied Team SIDs. Saved only source/docs/tests/configuration to Git; references, environment files and local screenshots remained excluded. `docs/deployment-results.md` lists evidence, URLs and remaining manual evaluation work. No home-folder repository, real purchase or external messaging was used. Formal AChecker/W3C evaluation, screen-reader testing and WCAG conformance are not claimed. The team still needs to assess these outputs and select report evidence.

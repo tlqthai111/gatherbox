@@ -1,6 +1,6 @@
 # Accessibility checklist
 
-**Local integration checks: 20 October 2026, Codex.** Tested the production preview at `http://127.0.0.1:4173/gatherbox/` using Playwright and installed headless Chromium, with real cart/form interactions and no preview fixtures. These checks are not an AChecker or W3C WAI report and establish no WCAG conformance level.
+**Local and hosted integration checks: 20 October 2026, Codex.** Tested the production preview and [published site](https://tlqthai111.github.io/gatherbox/) using Playwright and installed headless Chromium, with real cart/form interactions and no preview fixtures. The expanded hosted suite passed 37 grouped checks; see `deployment-results.md`. These checks are not an AChecker or W3C WAI report and establish no WCAG conformance level.
 
 ## Actual Codex results
 
@@ -22,7 +22,7 @@
 | Storage unavailable | Cart-save and confirmation-save errors are explicit; blocked confirmation storage retains cart. |
 | Status/alert semantics | Cart/contact use role=status; storage/decline use role=alert. DOM/result text verified. Actual speech timing, wording and repetition have **not** been tested with assistive technology. |
 
-The automated keyboard actions cover selected paths. They are not a complete human keyboard-only pass across every control, tab sequence, state and viewport. See `testing-results.md` for all 34 grouped browser checks and five Node tests.
+The automated keyboard actions cover selected paths. They are not a complete human keyboard-only pass across every control, tab sequence, state and viewport. See `testing-results.md` for the original 34 local checks and five Node tests; `deployment-results.md` records the expanded 37-check hosted suite.
 
 ## Claude's earlier reported checks (not rerun claims)
 
@@ -41,3 +41,8 @@ The automated keyboard actions cover selected paths. They are not a complete hum
 - [ ] Attach the actual report/evidence to Task 8 and match Task 7 screenshots/URL to that version. Re-evaluate after material changes.
 
 Formal evaluation resources specified in the supplied assessment: [AChecker](https://achecks.org/checker/) and [W3C WAI report tool](https://www.w3.org/WAI/eval/report-tool/). No automated tool result alone establishes conformance.
+
+
+## Hosted evaluation sample ready
+
+All seven published page URLs are listed in `deployment-results.md`. Hosted keyboard/DOM/reflow checks passed, including empty checkout refusing an order even with valid inputs, and linked errors when a cart contains a kit. No AChecker/W3C report or assistive-technology result is implied. Formal Task 8 checks remain pending against the published version.

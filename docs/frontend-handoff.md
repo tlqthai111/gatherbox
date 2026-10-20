@@ -4,7 +4,7 @@
 
 ## Current result
 
-The original seven-page visual design is retained. Cart, checkout, explicit payment simulation, confirmation and contact validation are implemented. The production build and five Node tests pass; 34 grouped Chromium checks pass against the actual local production preview. Exact results and limits are in [testing-results.md](testing-results.md). No remote, push or publication has occurred.
+The original seven-page visual design is retained. Cart, checkout, explicit payment simulation, confirmation and contact validation are implemented. The production build and five Node tests pass; the expanded suite of 37 grouped Chromium checks passes against both local production and the hosted site. Exact results and limits are in [testing-results.md](testing-results.md). Published on 20 October 2026: [repository](https://github.com/tlqthai111/gatherbox), [public website](https://tlqthai111.github.io/gatherbox/), [successful workflow](https://github.com/tlqthai111/gatherbox/actions/runs/39392380257). See [deployment-results.md](deployment-results.md).
 
 This is a UTS 31245 B2C student prototype: two neutral tableware kits for 10/20 guests, initially proposed for Sydney households. Each guest has one plate, cup, fork and napkin. No backend, accounts, real payment, order delivery or external APIs. Optional extras are outside the current prototype scope; align Task 7 in the report accordingly.
 
@@ -26,7 +26,7 @@ This is a UTS 31245 B2C student prototype: two neutral tableware kits for 10/20 
 | `tests/integration.test.js` | Five Node tests run by `npm test` |
 | `scripts/browser-check.mjs` | Optional Playwright production regression checks; screenshots in ignored tmp |
 | `vite.config.js` | `/gatherbox/` base and seven HTML entries |
-| `.github/workflows/deploy.yml` | Manual-only prepared Pages workflow; never run here |
+| `.github/workflows/deploy.yml` | Manual-only Pages workflow; build and deploy succeeded in run #1 |
 
 The old `src/preview.js` and dev import were removed. `?preview=filled` / `?preview=errors` no longer fill any state. Do not use old design-fixture evidence as proof of working features.
 
@@ -61,8 +61,9 @@ Claude originally reported a successful frontend build, semantic/ARIA checks, co
 - [x] Verify all Team details against the user’s clarification: Thai 25507474, Anthony 26486593, Ashcan 26077610.
 - [ ] Confirm demonstration prices, proposed policy/dispatch copy and two-kit scope; align report references to optional extras.
 - [ ] Complete human keyboard, screen-reader and real-browser zoom checks; document actual findings.
-- [x] User authorised a public gatherbox repository, push and Pages publication on 20 October 2026. Deployment verification is in progress.
-- [ ] After publication, retest the hosted `/gatherbox/` pages; capture Task 7 URL/screenshots from that version.
+- [x] User authorised public gatherbox publication; repository, push, Pages build/deploy and hosted checks completed on 20 October 2026.
+- [x] Retest all seven hosted `/gatherbox/` pages and purchase simulation; local hosted-test captures saved outside Git.
+- [ ] Select/caption final hosted screenshots for the Task 7 report.
 - [ ] Run AChecker, then complete the W3C WAI report for Task 8; include unresolved issues honestly.
 - [ ] Complete the human-review rows in `ai-use-log.md`; prepare the report's actual AI disclosure/evaluation appendix.
 

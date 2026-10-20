@@ -19,8 +19,8 @@ Updated 20 October 2026. Prototype choices are not evidence of a functioning bus
 | Payment/order | Explicit browser-only approved/declined simulation | Real hosted provider, server validation, order storage and fulfilment if launched |
 | Customer data | No app persistence/transmission of personal checkout/contact entries | A real store needs separately designed privacy, access and retention arrangements |
 | Contact/social | Demonstration form is unsent; no real profiles or support channel | Actual verified channels and support ownership before launch |
-| Hosting | Prepared for GitHub Pages repository `gatherbox`; local subpath tested | Publication authorised by the user on 20 October 2026; repository creation/push, Pages setup and deployed verification in progress |
+| Hosting | Published through GitHub Pages at https://tlqthai111.github.io/gatherbox/; all seven hosted pages and main flow tested | User-authorised publication completed 20 October 2026; future changes require review/retest |
 | Team | All three identities confirmed by the user on 20 October 2026: Luu Quoc Thai Tran — 25507474; Anthony Bui — 26486593; Ashcan Zaman — 26077610 | Team page updated; report/reference draft is unchanged |
-| Accessibility | Local DOM, keyboard and responsive checks only | Published AChecker and W3C WAI evaluation, screen reader, zoom and broader manual tests |
+| Accessibility | Limited local and hosted DOM, keyboard and responsive checks | Published AChecker and W3C WAI evaluation, screen reader, zoom and broader manual tests |
 
 The report draft's instructions/placeholders are reference material, not authorisation to edit that document or assert future functionality. The supplied report remains unchanged in ignored `reference/`. Its Task 7 “optional extras” wording needs human alignment with the agreed two-kit scope. The assessment guideline/marking criteria require final website evidence and formal accessibility reporting; preparing this implementation does not complete those submission tasks.

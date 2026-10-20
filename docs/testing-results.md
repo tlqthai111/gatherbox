@@ -1,4 +1,4 @@
-# Integration verification results
+# Integration verification results (historical local milestone)
 
 Date: **20 October 2026 (Australia/Sydney)**. Tester: Codex. Repository/root verified as `/Users/vanln/Developer/gatherbox`, with its own `.git`, main branch, no commits and no remote at the start. Home-folder Git was not changed. The frontend/source, catalogue, handoff and all four supplied references were read before implementation.
 
@@ -78,3 +78,8 @@ The prepared GitHub Actions workflow has not executed on GitHub. No repository w
 The user authorised a public `gatherbox` repository, push and Pages deployment. Reverified the exact project/Git root, `.gitignore`, current status and configured real author identity. All three Team names/SIDs now match the user's clarification; no SID is missing. Prototype and sample-price notices appear on all seven pages. Five Node tests and the production build passed again. The expanded production browser suite passed **37 grouped checks**: the original 34 plus all three Team identities, a working shopping route from the empty cart with no visible checkout link, and direct empty checkout with valid fictional fields/approval still refusing to create an order. Nonempty blank/invalid checkout continues to show linked errors and focused summary. No purchase-with-empty-cart option was added.
 
 Verified official action tag revisions through GitHub; refreshed setup-node's pinned v7 revision before publishing. Reference and local environment files remain excluded. Hosted results will be recorded after actual publication.
+
+
+## Published milestone
+
+See `deployment-results.md` for successful workflow/source, actual public URLs and **37/37 hosted browser checks** on 20 October 2026. This supersedes the earlier local milestone's “not published/not executed” status; those statements describe the prepublication checks only. All Team SIDs are now confirmed and present. The extra three checks cover Team identities, empty-cart shopping/no-checkout route, and valid-form empty-checkout rejection.
