@@ -2,6 +2,8 @@
 
 UTS 31245 Assessment 2 prototype, due 25 October 2026. GatherBox proposes neutral tableware kits for Sydney households: 10 or 20 guests, with one plate, cup, fork and napkin per guest. This is a static demonstration, not a trading store.
 
+Website development lead: Luu Quoc Thai Tran.
+
 The existing Claude frontend design is retained. Codex integrated the cart, checkout, explicit payment outcomes, confirmation and contact validation on 20 October 2026. Current handoff: [docs/frontend-handoff.md](docs/frontend-handoff.md).
 
 ## Setup and commands
