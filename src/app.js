@@ -71,6 +71,7 @@ export function initApp() {
       $('[data-line-contents]', line).textContent = contentsSummary(product);
       $('[data-line-unit-price]', line).textContent = formatAUD(product.priceCents);
       const input = $('[data-line-quantity]', line);
+      // Replace the inert template association with a product-unique ID before insertion.
       input.id = `cart-qty-${productId}`;
       input.value = quantity;
       input.max = MAX_QUANTITY_PER_LINE;

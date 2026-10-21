@@ -16,6 +16,7 @@ context.on('page', p => {
  p.on('response', r => { if(r.status()>=400) failures.push(`${r.status()} ${r.url()}`); });
 });
 const page = await context.newPage();
+const cdp = await context.newCDPSession(page);
 const go = name => page.goto(`${base}${name}.html`);
 const visible = s => assert.equal(s,true);
 const value = s => page.locator(s).textContent();
@@ -26,6 +27,20 @@ try {
  for(const name of ['index','shop','cart','checkout','confirmation','help','team']) {
   await go(name);
   assert.equal(page.url().includes('?'),false);
+  const {nodes: brandAX} = await cdp.send('Accessibility.getFullAXTree');
+  assert.deepEqual(brandAX.filter(n => !n.ignored && n.role?.value === 'link' && n.name?.value.includes('GatherBox')).map(n => n.name.value), ['GatherBox home page']);
+  assert.equal(await page.locator('a.brand img').getAttribute('alt'), 'GatherBox home page');
+  assert.equal(await page.locator('a.brand > span').getAttribute('aria-hidden'), 'true');
+  assert.equal(await page.locator('a.brand > span').innerText(), 'GatherBox');
+  check(`${name}: computed brand link name is exactly GatherBox home page`);
+  if (name === 'cart') {
+   assert.deepEqual(await page.locator('#cart-line-template').evaluate(template => {
+    const label = template.content.querySelector('[data-line-quantity-label]');
+    const input = template.content.querySelector('[data-line-quantity]');
+    return {matches: !!input.id && label.htmlFor === input.id, text: label.textContent.trim()};
+   }), {matches:true, text:'Quantity'});
+   check('inert cart template has a matching for/id and nonempty Quantity label');
+  }
   const issues = await page.evaluate(() => {
    const issues=[];const ids=[...document.querySelectorAll('[id]')].map(el=>el.id);
    if(new Set(ids).size!==ids.length)issues.push('duplicate IDs');
@@ -58,6 +73,17 @@ try {
  await page.locator('[data-action="remove-from-cart"]').click();visible(await page.locator('[data-cart-state="empty"]').isVisible());assert.equal(await active(),'cart-empty-heading');check('last removal: empty state and heading focus');
  await go('shop');await add('kit-20');await go('cart');await total('cart','$61.00');check('20-guest kit: $49 + $12 = $61');
  await go('shop');await add('kit-10',2);await go('cart');await total('cart','$119.00');assert.equal(await value('[data-cart-subtotal]'),'$107.00');check('mixed cart, sample delivery applied once');
+ const quantityLabels = await page.locator('[data-line-quantity]').evaluateAll(els => els.map(el => ({
+  id: el.id, labels: [...el.labels].map(label => ({for: label.htmlFor, text:label.textContent.trim()})),
+ }))).then(rows => rows.sort((a,b) => a.id.localeCompare(b.id)));
+ assert.deepEqual(quantityLabels, [
+  {id:'cart-qty-kit-10',labels:[{for:'cart-qty-kit-10',text:'Quantity of 10-guest kits'}]},
+  {id:'cart-qty-kit-20',labels:[{for:'cart-qty-kit-20',text:'Quantity of 20-guest kits'}]},
+ ]);
+ assert.equal(await page.locator('#cart-qty-template').count(),0);
+ const {nodes: cartAX} = await cdp.send('Accessibility.getFullAXTree');
+ assert.deepEqual(cartAX.filter(n => !n.ignored && n.role?.value === 'spinbutton').map(n => n.name.value).sort(), ['Quantity of 10-guest kits','Quantity of 20-guest kits']);
+ check('both cart quantities have unique product IDs, matching labels and computed kit-specific names');
  await page.locator('#cart-qty-kit-10').fill('3');await page.locator('#cart-qty-kit-10').press('Tab');await total('cart','$148.00');
  await page.locator('#cart-qty-kit-10').fill('0');await page.locator('#cart-qty-kit-10').press('Tab');assert.equal(await page.locator('#cart-qty-kit-10').inputValue(),'3');await total('cart','$148.00');check('quantity update and invalid quantity restored');
  await page.reload();await total('cart','$148.00');check('cart survives reload');

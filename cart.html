@@ -22,8 +22,8 @@
       </div>
       <div class="container header-inner">
         <a class="brand" href="index.html">
-          <img class="brand-mark" src="/src/assets/favicon.svg" alt="" width="28" height="28" />
-          <span>GatherBox<span class="visually-hidden"> home page</span></span>
+          <img class="brand-mark" src="/src/assets/favicon.svg" alt="GatherBox home page" width="28" height="28" />
+          <span aria-hidden="true">GatherBox</span>
         </a>
         <nav class="site-nav" aria-label="Main">
           <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav-list" hidden>
@@ -94,8 +94,8 @@
           </div>
           <div class="cart-line-controls">
             <div class="field">
-              <label data-line-quantity-label>Quantity<span class="visually-hidden" data-line-quantity-name></span></label>
-              <input type="number" name="quantity" inputmode="numeric" min="1" max="10" step="1" value="1" data-line-quantity />
+              <label for="cart-qty-template" data-line-quantity-label>Quantity<span class="visually-hidden" data-line-quantity-name></span></label>
+              <input id="cart-qty-template" type="number" name="quantity" inputmode="numeric" min="1" max="10" step="1" value="1" data-line-quantity />
             </div>
             <button type="button" class="btn btn--link" data-action="remove-from-cart">
               Remove<span class="visually-hidden" data-line-remove-name></span>

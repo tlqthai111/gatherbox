@@ -1,5 +1,7 @@
 # Accessibility checklist
 
+**21 October 2026 follow-up:** user-reported AChecker Checks 7 and 188 were reviewed against source and Chromium accessible names. Updated the brand/template patterns and passed 46 local production-browser checks. See [accessibility-review.md](accessibility-review.md) for the before/after evidence, classification, deployment result and pending checker retest. This is not a fresh AChecker result.
+
 **Local and hosted integration checks: 20 October 2026, Codex.** Tested the production preview and [published site](https://tlqthai111.github.io/gatherbox/) using Playwright and installed headless Chromium, with real cart/form interactions and no preview fixtures. The expanded hosted suite passed 37 grouped checks; see `deployment-results.md`. These checks are not an AChecker or W3C WAI report and establish no WCAG conformance level.
 
 ## Actual Codex results
@@ -36,7 +38,7 @@ The automated keyboard actions cover selected paths. They are not a complete hum
 - [ ] Independent contrast assessment for normal/hover/focus/error/disabled states; colour independence, alt-text quality, reading order and target sizes.
 - [ ] Safari/Firefox and real mobile device testing; browser Back/Forward and restored-session behaviour. The Chromium runner disables back/forward cache by default, so its tests do not establish cache restoration behaviour.
 - [ ] User review of wording, cognitive load, fictional-data instructions and visual clarity.
-- [ ] After publication approval, run AChecker against the published version first. Record exact page URLs, date, settings and known/likely/potential findings; verify findings manually and log fixes/retests. No AChecker results exist from this integration.
+- [ ] Rerun AChecker against the updated published version. The user supplied initial Checks 7/188; record the actual new page URLs, date, settings and known/likely/potential findings, then verify findings manually. No fresh AChecker result has been obtained by Codex.
 - [ ] Then complete the W3C WAI Website Accessibility Evaluation Report for the same final published version: evaluator, evaluation scope, chosen target, representative sample, findings, evidence and unresolved issues. No report has been generated here.
 - [ ] Attach the actual report/evidence to Task 8 and match Task 7 screenshots/URL to that version. Re-evaluate after material changes.
 
