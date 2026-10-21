@@ -2,6 +2,18 @@
 
 ## Current deployed version for accessibility evaluation
 
+- Date: **21 October 2026 (Australia/Sydney)**.
+- Change: requested brand-image alternative pattern on all seven pages and explicit Cart template label/input association; runtime kit-specific IDs/names preserved.
+- Deployed source: [`1d135f18d5e8b76669392682ff429af64e4e943b`](https://github.com/tlqthai111/gatherbox/commit/1d135f18d5e8b76669392682ff429af64e4e943b).
+- Successful manual deployment: [workflow run #3](https://github.com/tlqthai111/gatherbox/actions/runs/39555516703), build and deploy passed.
+- Website: https://tlqthai111.github.io/gatherbox/
+- Verification: five local Node tests and build passed; **46/46 grouped browser checks passed locally and again on the hosted site**. Seven hosted HTML files matched the local build byte-for-byte.
+- Review: [accessibility-review.md](accessibility-review.md) explains the original observations, actual changes, classifications and limitations. AChecker was not rerun; no zero-findings or WCAG-conformance claim.
+
+Use this source commit, exact page/state and actual evaluation date for the next accessibility evaluation. The earlier 20 October records below remain historical. The later results-documentation commit changes no website HTML/CSS/JS.
+
+## Previous credit-update deployment (historical record)
+
 - Update: exact Team page and README credit, “Website development lead: Luu Quoc Thai Tran.”
 - Deployment date: 20 October 2026 (Australia/Sydney).
 - Deployed source commit: [`098f79884dd2bdbaa1014e8796863906b5ec2b68`](https://github.com/tlqthai111/gatherbox/commit/098f79884dd2bdbaa1014e8796863906b5ec2b68).

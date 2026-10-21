@@ -4,6 +4,8 @@
 
 ## Current result
 
+**21 October 2026 accessibility-markup update:** deployed `1d135f18d5e8b76669392682ff429af64e4e943b` through [successful run #3](https://github.com/tlqthai111/gatherbox/actions/runs/39555516703). Five Node tests/build and 46 local plus 46 hosted browser checks passed. See `accessibility-review.md` for why the changes improve source clarity/checker compatibility without claiming pre-existing runtime naming failures. AChecker rerun and formal evaluation remain pending. Older milestone results below are historical.
+
 Latest credit-only update: deployed commit `098f79884dd2bdbaa1014e8796863906b5ec2b68`, [successful workflow #2](https://github.com/tlqthai111/gatherbox/actions/runs/39399578265). The exact requested development-lead credit appears on Team/README. Focused hosted Team verification passed; see `deployment-results.md` for the current evaluation version and the separate historical full-browser results. Formal accessibility/report work remains pending.
 
 The original seven-page visual design is retained. Cart, checkout, explicit payment simulation, confirmation and contact validation are implemented. The production build and five Node tests pass; the expanded suite of 37 grouped Chromium checks passes against both local production and the hosted site. Exact results and limits are in [testing-results.md](testing-results.md). Published on 20 October 2026: [repository](https://github.com/tlqthai111/gatherbox), [public website](https://tlqthai111.github.io/gatherbox/), [successful workflow](https://github.com/tlqthai111/gatherbox/actions/runs/39392380257). See [deployment-results.md](deployment-results.md).

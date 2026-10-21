@@ -55,9 +55,9 @@ Published with the user's explicit authorisation on 20 October 2026:
 
 - Public repository: [tlqthai111/gatherbox](https://github.com/tlqthai111/gatherbox)
 - Public website: [GatherBox student prototype](https://tlqthai111.github.io/gatherbox/)
-- Latest successful build/deploy: [GitHub Actions run #2](https://github.com/tlqthai111/gatherbox/actions/runs/39399578265), source commit `098f79884dd2bdbaa1014e8796863906b5ec2b68`.
+- Latest successful build/deploy: [GitHub Actions run #3](https://github.com/tlqthai111/gatherbox/actions/runs/39555516703), source commit `1d135f18d5e8b76669392682ff429af64e4e943b` (21 October 2026).
 - All three Team identities verified against the user: Luu Quoc Thai Tran - 25507474; Anthony Bui - 26486593; Ashcan Zaman - 26077610. No SID is pending.
-- Verification: the original deployment passed **37 grouped Chromium checks**. The latest credit-only update passed its build/deployment and focused hosted Team-page checks; the full browser suite was not repeated. Formal accessibility evaluation and unfinished report work remain pending. See the [versioned deployment record](docs/deployment-results.md).
+- Verification: **46 grouped Chromium checks passed locally and on the latest hosted version**, including computed brand/cart quantity names, cart behaviour and checkout protection. See the [accessibility review](docs/accessibility-review.md) and [versioned deployment record](docs/deployment-results.md). The user supplied initial AChecker findings; a checker rerun, formal evaluation and unfinished report work remain pending.
 
 The saved workflow remains **manual-only** (`workflow_dispatch`), with no push trigger. It uses Node 24, installs locked dependencies with `npm ci`, runs `npm test`, builds all seven pages, uploads **only `dist/`** and deploys `main` through the `github-pages` environment. References, environment files, dependencies, build output and local test screenshots remain ignored. No home-folder repository was changed.
 

@@ -41,6 +41,10 @@ The interpretation of the original brand pattern is consistent with [W3C WAI's l
 
 ## Deployment and evaluation limits
 
-The verified changes are to be committed and deployed through the existing manual GitHub Pages workflow. The exact deployed source/run and repeated hosted check results will be recorded here after success, and in `deployment-results.md`.
+Published on **21 October 2026** through [manual workflow run #3](https://github.com/tlqthai111/gatherbox/actions/runs/39555516703), whose build and deploy jobs both succeeded. Deployed source: [`1d135f18d5e8b76669392682ff429af64e4e943b`](https://github.com/tlqthai111/gatherbox/commit/1d135f18d5e8b76669392682ff429af64e4e943b). The workflow reran its dependency install, Node tests and production build successfully.
+
+Repeated the full **46/46 grouped browser checks on the actual HTTPS site**, including all seven computed brand names, inert-template association, two-kit runtime names/IDs, empty and populated carts, quantities/removal, keyboard/mobile paths and checkout protection. Anonymous HTTPS responses for all seven HTML pages matched the local build byte-for-byte. These are the updated rendered-browser results, not a fresh AChecker report. Version details are also in `deployment-results.md`; the subsequent documentation-only commit does not change website build content.
+
+Baseline browser-name observations, hosted HTML hashes, header comparison images and hosted test captures are retained in ignored `tmp/accessibility-review-2026-10-21/`. They are local test evidence, not published reference documents or a formal evaluation report.
 
 The initial AChecker results above are user-reported. A fresh AChecker run is still needed against the updated published version; no claim is made that either check has disappeared. Actual speech output in VoiceOver/NVDA, full human keyboard traversal, browser text zoom, Safari/Firefox and broader device coverage remain pending. Chromium accessible-name evidence is useful but does not substitute for those checks, AChecker retesting or the W3C WAI evaluation report. No unfinished report section has been marked complete.

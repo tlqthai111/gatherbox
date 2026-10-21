@@ -1,6 +1,6 @@
 # Accessibility checklist
 
-**21 October 2026 follow-up:** user-reported AChecker Checks 7 and 188 were reviewed against source and Chromium accessible names. Updated the brand/template patterns and passed 46 local production-browser checks. See [accessibility-review.md](accessibility-review.md) for the before/after evidence, classification, deployment result and pending checker retest. This is not a fresh AChecker result.
+**21 October 2026 follow-up:** user-reported AChecker Checks 7 and 188 were reviewed against source and Chromium accessible names. Updated the brand/template patterns and passed 46 local and 46 hosted production-browser checks. See [accessibility-review.md](accessibility-review.md) for the before/after evidence, classification, deployment result and pending checker retest. This is not a fresh AChecker result.
 
 **Local and hosted integration checks: 20 October 2026, Codex.** Tested the production preview and [published site](https://tlqthai111.github.io/gatherbox/) using Playwright and installed headless Chromium, with real cart/form interactions and no preview fixtures. The expanded hosted suite passed 37 grouped checks; see `deployment-results.md`. These checks are not an AChecker or W3C WAI report and establish no WCAG conformance level.
 
